@@ -11,13 +11,16 @@ A new Flutter plugin.
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'jadennn' => 'email_jade@163.com' }
-  s.source           = { :path => 'IJKMediaFramework.framework' }
-  s.source_files = 'Classes/**/*'
+  s.source           = { :path => '.' }
+  s.source_files = 'Classes/**/*' , 'IJKMediaFramework.framework'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.vendored_frameworks = 'IJKMediaFramework.framework'
+  s.static_framework = true
+
+  #s.vendored_frameworks = 'IJKMediaFramework.framework'
+  s.dependency 'FlutterIJK', '~> 0.1.0'
 
   s.ios.deployment_target = '8.0'
-  s.library = ['z', 'c++']
+  #s.library = ['z', 'c++']
 end
 
